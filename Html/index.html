@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tomtop.com - Loving, Shopping, Sharing</title>
+    <title>Tomtop - Loving, Shopping, Sharing</title>
     <link rel="stylesheet" href="./Styles/index.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../Styles/index.css">
+    <link rel="stylesheet" href="../Styles/footer.css">
   </head>
   <body>
     <div id="navbar"></div>
@@ -56,14 +58,19 @@
         <p>New Buyers Only</p>
       </div>
     </div>
-    
+    <div id="footer_part"></div>
   </body>
 </html>
 
 <script type="module">
   import nav_bar from "./components/nav_bar.js";
+  import footer from "./components/footer.js";
+
+  let navbar = document.getElementById("navbar");
+  let footer_part = document.getElementById("footer");
 
   navbar.innerHTML = nav_bar();
+  footer_part.innerHTML = footer();
 
   function slideshow() {
     let slideshows = document.getElementById("slideshow");
