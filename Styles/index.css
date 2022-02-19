@@ -1,0 +1,133 @@
+body {
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+#winter_Olympics img {
+  /* border: 1px solid red; */
+  width: 101%;
+  height: 25%;
+  margin-top: -0.75%;
+  margin-left: -0.5%;
+}
+#Nav_Bar {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+#account {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  /* gap: 5%; */
+  /* width: 25%; */
+  margin-left: 3%;
+}
+#icon {
+  width: 80px;
+  height: 50px;
+  /* border: 1px solid black; */
+  text-align: center;
+  /* box-sizing: border-box; */
+  font-weight: lighter;
+  font-size: 30px;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+button p {
+  font-size: 16px;
+}
+#tags a {
+  color: #4d82bd;
+  text-decoration: none;
+}
+#tags :hover {
+  text-decoration: underline;
+  /* color: black; */
+}
+#logo_part {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+}
+#tomtop_logo {
+  padding: 1%;
+  padding-left: 6%;
+}
+#lang {
+  padding: 2%;
+  /* border: 1px solid red; */
+  cursor: pointer;
+}
+#all {
+  padding: 2%;
+  cursor: pointer;
+}
+#search_bar {
+  padding: 2% 0%;
+  width: 33%;
+  /* border: 1px solid blue; */
+  /* margin-left: 0px; */
+}
+input {
+  border: none;
+}
+#bar {
+  width: 80%;
+  height: 80%;
+}
+.search {
+  /* border: 1px solid red; */
+  width: 15%;
+  height: 85%;
+  background-color: #4d82b8;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-top: 1.3%;
+  cursor: pointer;
+  margin-left: -0.75%;
+}
+.p1 {
+  margin-top: -10px;
+}
+#tags {
+  /* border: 1px solid red; */
+  text-align: center;
+  margin-top: -2%;
+}
+#gif {
+  margin-left: -25%;
+}
+#menu {
+  display: grid;
+  grid-template-columns: 15% 60% 15%;
+  border: 1px solid red;
+  gap: 2%;
+  padding: 0% 5%;
+  width: 100%;
+  font-size: 14px;
+  color: #666666;
+}
+#sub_menu {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  padding-left: 5%;
+}
+#arrow_down {
+  margin-top: -15px;
+  padding-top: 1%;
+  /* border: 1px solid red; */
+}
+.menu {
+  border: 1px solid red;
+  margin-top: 0px;
+}
