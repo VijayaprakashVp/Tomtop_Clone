@@ -12,79 +12,86 @@
     />
   </head>
   <body>
-    <div>
-      <!-- winter_Olympics -->
-
-      <div id="winter_Olympics">
-        <img
-          src="https://img.tttcdn.com/advertising/2022/2/15/Zsuiz2-897457327.jpg"
-          alt=""
-        />
+    <div id="navbar"></div>
+    <div id="slideshow"></div>
+    <div id="sale_Gifts">
+      <div>
+        <a href="#"
+          ><img
+            src="https://img.tttcdn.com/home/page/2021/12/30/f72G2U46734060.png"
+            alt=""
+        /></a>
+        <p>Flash Sale</p>
       </div>
-
-      <!-- NavBar -->
-
-      <div id="Nav_Bar">
-        <div id="logo_part">
-          <div id="tomtop_logo">
-            <a href="./index.html"><img
-                src="https://static.tomtop.com/tomtop/icon/logo.png?v=3"
-                alt=""
-              /></a>
-          </div>
-          <div id="lang">| English <span class="material-icons" id="arrow">arrow_drop_down</span> </div>
-          <div id="all">All <span class="material-icons" id="arrow">arrow_drop_down</span> </div>
-          <div id="search_bar">
-            <input type="text" placeholder="What are you looking for?" id="bar" />
-            <span class="material-icons search" >search</span>
-          </div>
-          <div id="account">
-            <button>
-              <span class="material-icons" id="icon">person_outline</span> <span id="gif"><img src="https://static.tomtop.com/tomtop/img/gift_icon.gif" alt=""></span>
-              <p class="p1">Sign In</p>
-            </button>
-            &nbsp;&nbsp;&nbsp;
-            <button>
-              <span class="material-icons" id="icon">favorite_border</span>
-              <p class="p1">Favourites</p>
-            </button>
-            &nbsp;&nbsp;&nbsp;
-            <button>
-              <span class="material-icons" id="icon">shopping_cart</span>
-              <p class="p1">Cart</p>
-            </button>
-          </div>
-        </div>
-        <div id="tags">
-            <p>
-                <a href="#">Popular Earphones</a>,
-                <a href="#">Smartphones</a>,
-                <a href="#">3d Printer</a>,
-                <a href="#">Electric Bikes</a>,
-                <a href="#">Sports Watch</a>,
-            </p>
-        </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://img.tttcdn.com/home/page/2021/12/30/JpWty5-714956459.png"
+            alt=""
+        /></a>
+        <p>Extra 50% Off Coupon</p>
       </div>
-      
-      <!-- Menu -->
-
-      <div id="menu">
-          <div>
-            <span class="material-icons menu">menu</span>
-            <span><strong>Shop By Departments</strong></span>
-          </div>
-          <div id="sub_menu">
-              <p>New Arrivals</p>
-              <p>Flash Deals<span class="material-icons" id="arrow_down">arrow_drop_down</span></p>
-              <p>Coupons<span class="material-icons" id="arrow_down">arrow_drop_down</span></p>
-              <p>Social Savings<span class="material-icons" id="arrow_down">arrow_drop_down</span></p>
-              <p>Clearance<span class="material-icons" id="arrow_down">arrow_drop_down</span></p>
-          </div>
-          <div>
-              <img src="https://img.tttcdn.com/advertising/2021/12/21/uo0byU1874985519.jpg" alt="">
-          </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://img.tttcdn.com/home/page/2021/12/30/vDIKeM1121392672.png"
+            alt=""
+        /></a>
+        <p>Get Free Gift</p>
       </div>
-
+      <div>
+        <a href="#"
+          ><img
+            src="https://img.tttcdn.com/home/page/2021/12/30/LH98XG1967782958.png"
+            alt=""
+        /></a>
+        <p>New Arrivals</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://img.tttcdn.com/home/page/2021/12/30/HNpfEm1068098003.png"
+            alt=""
+        /></a>
+        <p>New Buyers Only</p>
+      </div>
     </div>
+    
   </body>
 </html>
+
+<script type="module">
+  import nav_bar from "./components/nav_bar.js";
+
+  navbar.innerHTML = nav_bar();
+
+  function slideshow() {
+    let slideshows = document.getElementById("slideshow");
+
+    let img = document.createElement("img");
+
+    let images = [
+      "https://img.tttcdn.com/advertising/2022/2/11/xASmrG-1991557746.jpg",
+      "https://img.tttcdn.com/advertising/2022/2/9/VrgvUX-1890407756.jpg",
+      "https://img.tttcdn.com/advertising/2022/2/11/jTnJyh701652965.jpg",
+      "https://img.tttcdn.com/advertising/2022/2/11/mqpE4H560541196.jpg",
+      "https://img.tttcdn.com/advertising/2022/2/11/p7FWgn-2025521969.jpg",
+    ];
+
+    img.src = images[0];
+    var count = 1;
+    setInterval(() => {
+      if (count === images.length) {
+        count = 0;
+      }
+
+      img.src = images[count];
+      slideshows.append(img);
+      count++;
+    }, 2000);
+
+    slideshows.append(img);
+  }
+
+  slideshow();
+</script>
