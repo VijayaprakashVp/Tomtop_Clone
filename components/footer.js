@@ -7,11 +7,9 @@ function footer () {
         <img src="https://i.ibb.co/Z1z6PqX/Screenshot-86.png" alt="" />
         <img src="https://i.ibb.co/VDGXnVq/Screenshot-87.png" alt="" />
         <img src="https://i.ibb.co/197Q6DY/Screenshot-88.png" alt="" />
-        <img
-          src="https://i.ibb.co/Ct7nzg3/pinterest-social-icons-png-14.png"
-          alt=""
-        />
+        <img src="https://i.ibb.co/Ct7nzg3/pinterest-social-icons-png-14.png" alt="" />
       </div>
+      
       <div id="mobile">
         <p><strong>TOMTOP Mobile</strong></p>
         <div>
