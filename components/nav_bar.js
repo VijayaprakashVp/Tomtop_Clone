@@ -37,15 +37,16 @@ function nav_bar() {
         <span class="material-icons search">search</span>
       </div>
       <div id="account">
-        <button>
-          <span class="material-icons" id="icon">person_outline</span>
-          <span id="gif"
-            ><img
-              src="https://static.tomtop.com/tomtop/img/gift_icon.gif"
-              alt=""
-          /></span>
-          <p class="p1">Sign In</p>
-        </button>
+      <button>
+      <span class="material-icons" id="icon">person_outline</span>
+      <span id="gif"
+        ><img
+          src="https://static.tomtop.com/tomtop/img/gift_icon.gif"
+          alt=""
+      /></span>
+      <p class="p1">Sign In</p>
+    </button>
+        
         &nbsp;&nbsp;&nbsp;
         <button>
           <span class="material-icons" id="icon">favorite_border</span>

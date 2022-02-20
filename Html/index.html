@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tomtop - Loving, Shopping, Sharing</title>
-    <link rel="stylesheet" href="./Styles/index.css" />
+    <link rel="stylesheet" href="../Styles/index.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../Styles/index.css">
-    <link rel="stylesheet" href="../Styles/footer.css">
+    <link rel="stylesheet" href="../Styles/footer.css" />
+    <script src="../Scripts/socailsaving.js"></script>
   </head>
   <body>
     <div id="navbar"></div>
@@ -59,18 +59,23 @@
       </div>
     </div>
     <div id="footer_part"></div>
+    
   </body>
 </html>
 
 <script type="module">
-  import nav_bar from "./components/nav_bar.js";
-  import footer from "./components/footer.js";
+  import nav_bar from "../components/nav_bar.js";
+  import footer from "../components/footer.js";
 
   let navbar = document.getElementById("navbar");
-  let footer_part = document.getElementById("footer");
-
+  let footer_part = document.getElementById("footer_part");
+  
   navbar.innerHTML = nav_bar();
+  // console.log("navbar:", nav_bar);
   footer_part.innerHTML = footer();
+  // console.log("footer:", footer);
+
+  // console.log("Hey!");
 
   function slideshow() {
     let slideshows = document.getElementById("slideshow");

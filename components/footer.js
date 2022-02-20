@@ -76,7 +76,7 @@ function footer () {
           Tomtop.
         </p>
         <br />
-        <p><button class="sub">Subscribe</button> &nbsp;<span> Privacy Policies</span> </p> 
+        <p><button class="sub">Subscribe</button> &nbsp;<span> <a href="#" style="text-decoration: none;">Privacy Policies</a> </span> </p> 
       </div>
     </div>
     <div>
