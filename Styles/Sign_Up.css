@@ -1,59 +1,59 @@
 body {
-    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  }
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
 #sign_up {
-    border: 1px lightslategrey grey;
-    margin: auto;
-    width: 33%;
+  border: 1px lightslategrey grey;
+  margin: auto;
+  width: 33%;
 }
 #logo_img {
-    padding: 1% 27% ;
+  padding: 1% 27%;
 }
 #create_account {
-    /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column;
-    /* text-align: center; */
-    margin: 2% 12%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  margin: 2% 12%;
 }
 form input {
-    width: 95%;
-    height: 6vh;
+  width: 95%;
+  height: 6vh;
 }
 a {
-    color:#4d82b8;
-    text-decoration: none;
+  color: #4d82b8;
+  text-decoration: none;
 }
 #agree {
-    width: 95%;
-    /* border: 1px solid black; */
-    margin-top: 2.5%;
+  width: 95%;
+  /* border: 1px solid black; */
+  margin-top: 2.5%;
 }
 #create_button {
-    /* border: 1px solid red; */
-    width: 96%;
-    height: 6vh;
-    background-color: #ff9900;
-    color: white;
-    margin-top: 5%;
-    text-align: center;
-    padding: 2.5% 0%;
-    font-size: 16px;
-    cursor: pointer;
+  /* border: 1px solid red; */
+  width: 96%;
+  height: 6vh;
+  background-color: #ff9900;
+  color: white;
+  margin-top: 5%;
+  text-align: center;
+  padding: 2.5% 0%;
+  font-size: 16px;
+  cursor: pointer;
 }
 .common_text {
-    font-size: 14px;
+  font-size: 14px;
 }
 .grey {
-    color: #777777;
-    margin-top: 1%;
+  color: #777777;
+  margin-top: 1%;
 }
 .already {
-    margin: auto;
-    text-align: center;
-    margin-top: 5%;
+  margin: auto;
+  text-align: center;
+  margin-top: 5%;
 }
 #create_account > h2 {
-    text-align: center;
-    font-weight: normal;
+  text-align: center;
+  font-weight: normal;
 }

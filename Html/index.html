@@ -12,10 +12,11 @@
     />
     <link rel="stylesheet" href="../Styles/footer.css" />
     <script src="../Scripts/socailsaving.js"></script>
+    <script src="../Scripts/slideshow.js"></script>
   </head>
   <body>
     <div id="navbar"></div>
-    <div id="slideshow"></div>
+    <div id="slide_show"></div>
     <div id="sale_Gifts">
       <div>
         <a href="#"
@@ -65,44 +66,15 @@
 <script type="module">
   import nav_bar from "../components/nav_bar.js";
   import footer from "../components/footer.js";
+  // import slideshow from "../Scripts/slideshow.js";
 
   let navbar = document.getElementById("navbar");
   let footer_part = document.getElementById("footer_part");
+  // let slide_show = document.getElementById("slide_show");
 
   navbar.innerHTML = nav_bar();
-  // console.log("navbar:", nav_bar);
   footer_part.innerHTML = footer();
-  // console.log("footer:", footer);
+  // slide_show.innerHTML = slideshow();
 
-  // console.log("Hey!");
-
-  function slideshow() {
-    let slideshows = document.getElementById("slideshow");
-
-    let img = document.createElement("img");
-
-    let images = [
-      "https://img.tttcdn.com/advertising/2022/2/11/xASmrG-1991557746.jpg",
-      "https://img.tttcdn.com/advertising/2022/2/9/VrgvUX-1890407756.jpg",
-      "https://img.tttcdn.com/advertising/2022/2/11/jTnJyh701652965.jpg",
-      "https://img.tttcdn.com/advertising/2022/2/11/mqpE4H560541196.jpg",
-      "https://img.tttcdn.com/advertising/2022/2/11/p7FWgn-2025521969.jpg",
-    ];
-
-    img.src = images[0];
-    var count = 1;
-    setInterval(() => {
-      if (count === images.length) {
-        count = 0;
-      }
-
-      img.src = images[count];
-      slideshows.append(img);
-      count++;
-    }, 2000);
-
-    slideshows.append(img);
-  }
-
-  slideshow();
+  
 </script>
