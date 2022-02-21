@@ -1,5 +1,5 @@
 function slideshow() {
-  let slideshows = document.getElementById("slideshow");
+  let slideshows = document.getElementById("slide_show");
 
   let img = document.createElement("img");
 
