@@ -34,16 +34,19 @@
   font-family: "Times New Roman";
   font-weight: 400;
 }
+#cart_width {
+  width: 98%;
+}
 #cart {
   /* border: 1px solid red; */
   display: grid;
   grid-template-columns: 50% 50%;
-  width: 75%;
   font-family: "Times New Roman";
   padding-left: 3%;
-  margin: -1% 0%;
-  height: 7vh;
+  margin: -2.5% 0%;
+  /* height: 7vh; */
   color: #999999;
+  width: 75%;
 }
 #price {
   /* border: 1px solid red; */
@@ -53,4 +56,122 @@
   text-align: center;
   color: #999999;
   font-size: 14px;
+}
+#cart_items {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+#radio {
+  height: 4vh;
+  border: 1px solid #ddd6d6;
+  padding: 1% 1%;
+  color: #ff7e00;
+  font-size: 16px;
+  margin: 2.5% 0%;
+}
+#radio span {
+  margin-left: 1%;
+}
+/* #cart_items radio {
+  color: #ff7e00;
+  background-color: #ff7e00;
+} */
+#cart_page {
+  border: 1px solid red;
+}
+#total {
+  /* border: 1px solid black;    */
+  /* height: 50vh; */
+  margin-left: 10%;
+  margin-top: -5%;
+}
+#total h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+#price1 {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 70% 25%;
+  margin-top: -5%;
+  color: #666666;
+  height: 20vh;
+}
+#overall_Total {
+  margin-left: -20%;
+  margin-bottom: -2%;
+  font-size: 20px;
+  color: #ff7e00;
+  font-weight: bold;
+}
+#promo {
+  /* border: 1px solid red; */
+  height: 4vh;
+  font-size: 14px;
+}
+#promo p {
+  margin: 1%;
+}
+#input_promo {
+  /* border: 1px solid red; */
+  font-size: 16px;
+  height: 6vh;
+  padding-top: 2%;
+}
+#input_promo input {
+  height: 4vh;
+  border: 1px solid #999999;
+}
+#input_promo span {
+  /* border: 1px solid black; */
+  padding: 1.7% 4%;
+  border-radius: 5px;
+  background-color: #ff7e00;
+  color: white;
+}
+#coupon_text {
+  /* border: 1px solid red; */
+  font-size: 15px;
+  letter-spacing: 0.25px;
+  color: #858b85;
+}
+#checkout {
+  width: 98%;
+  margin: auto;
+  height: 3vh;
+  padding: 3% 0%;
+  text-align: center;
+  /* border: 1px solid red;  */
+  background-color: #ff9900;
+  border-radius: 5px;
+}
+#proc_check #buyer {
+  font-size: 20px;
+  color: #66667e;
+  margin-left: 2%;
+}
+#refund {
+  /* border: 1px solid red; */
+  font-size: 15px;
+  color: #867777;
+  /* width: 80%; */
+}
+.check_icon {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  gap: 3%;
+  align-items: center;
+}
+#cart_items #cart_list {
+  border: 1px solid black;
+  width: 100%;
+  margin-top: 2%;
+  height: 70vh;
+}
+#footer_part {
+  /* border: 1px solid red; */
+  margin-top: 8%;
+  margin-left: -5%;
 }
