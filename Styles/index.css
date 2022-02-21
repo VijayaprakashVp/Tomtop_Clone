@@ -129,19 +129,20 @@ input {
   justify-content: center;
 }
 #slideshow {
-    width: 100%;
+  width: 100%;
 }
-#slideshow img {
-    width: 100%;
-    height: 65vh;
+#slide_show img {
+  width: 100%;
+  height: 70vh;
+  margin: 1% 0%;
 }
 #sale_Gifts {
-    /* border: 1px solid red; */
-    height: 45vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* gap: 2%; */
-    text-align: center;
-    margin: 20px 60px;
+  /* border: 1px solid red; */
+  height: 45vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 2%; */
+  text-align: center;
+  margin: 20px 60px;
 }
