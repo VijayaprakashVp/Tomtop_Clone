@@ -1,0 +1,31 @@
+#outer {
+  /* border: 1px solid red; */
+  width: 91%;
+  margin: auto;
+  margin-top: 2%;
+}
+#logo_img {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+#shopping_text {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  text-align: center;
+}
+#shopping_text p {
+  margin-left: 5%;
+  /* border: 1px solid red; */
+  text-align: center;
+  width: 300%;
+  padding: .8%;
+  height: 1.8vh;
+  letter-spacing: .2px;
+}
+.orange_shade {
+    color:white;
+    background-color: #ffad33;
+}
