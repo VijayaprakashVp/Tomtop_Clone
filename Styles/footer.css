@@ -70,6 +70,7 @@ body {
     height: 5vh;
     background-color: #ff9900;
     color: white;
+    border: none;
 }
 #subscribe span {
     color: #4d82b8;
