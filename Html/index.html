@@ -11,15 +11,44 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../Styles/footer.css" />
-    <script src="../Scripts/socailsaving.js"></script>
+    <script src="../Scripts/socialsaving.js"></script>
     <script src="../Scripts/hotdeals.js"></script>
     <script src="../Scripts/products.js"></script>
   </head>
   <body>
     <div id="navbar"></div>
     <div id="depart">
-      <div>
-        <div>1</div>
+      <div id="heading">
+        <div id="sub_head">
+          <p>Local Warehouse</p>
+          <p>Cellphone & Accessories</p>
+          <p>Camera & Photoaccessories</p>
+          <p>Toys & Hobbies</p>
+          <p>Sports & Outdoor</p>
+          <p>Smart Device & Safety</p>
+          <p>Apparel & Jewellry</p>
+          <p>Computer & Stationary</p>
+          <p>Video & Audio</p>
+          <p>Home & Garden</p>
+          <p>Health & Beauty</p>
+          <p>Car Accessories</p>
+          <p>Test Equipment & Tools</p>
+        </div>
+        <div id="right_arrow">
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+          <p>></p>
+        </div>
       </div>
     </div>
     <div id="sub_depart">2</div>
@@ -67,25 +96,27 @@
       </div>
     </div>
     <div id="all_Products">
-      <div id="Social_saving"></div>
-      <div id="Hot_deals"></div>
-      <div id="Products"></div>
+      <h2 class="item_Head">Social Saving</h2>
+      <p class="pro_head_des">Save with Friends</p>
+      <div id="social-saving"></div>
+      <h2 class="item_Head">Hot Deals</h2>
+      <p class="pro_head_des">More Items To Consider</p>
+      <div id="Hot-deals"></div>
+      <h2 class="item_Head">Products You Might Like</h2>
+      <div id="Pro-ducts"></div>
     </div>
     <div id="footer_part"></div>
   </body>
 </html>
-
 <script src="../Scripts/slideshow.js"></script>
+
 <script type="module">
   import nav_bar from "../components/nav_bar.js";
   import footer from "../components/footer.js";
-  // import slideshow from "../Scripts/slideshow.js";
 
   let navbar = document.getElementById("navbar");
   let footer_part = document.getElementById("footer_part");
-  // let slide_show = document.getElementById("slide_show");
 
   navbar.innerHTML = nav_bar();
   footer_part.innerHTML = footer();
-  // slide_show.innerHTML = slideshow();
 </script>

@@ -1,21 +1,20 @@
-function Products() {
+function socialsaving() {
   try {
-    fetch("http://localhost:6789/products")
+    fetch("http://localhost:6789/socials")
       .then((res) => res.json())
       .then((data) => {
-        hello2(data);
+        hello(data);
       });
   } catch (e) {
     console.log(e.message);
   }
 }
-// console.log("Products:");
 
-Products();
+socialsaving();
 
-function hello2(array) {
-  var all_product = document.getElementById("Pro-ducts");
-
+function hello(array) {
+  var Social_saving = document.getElementById("social-saving");
+  console.log("Social_saving:", Social_saving);
   array.forEach((product) => {
     // console.log(product);
     let div = document.createElement("div");
@@ -34,6 +33,6 @@ function hello2(array) {
 
     div.append(img, name, cur_price, reg_price);
     // console.log((img, name, cur_price, reg_price));
-    all_product.append(div);
+    Social_saving.append(div);
   });
 }
