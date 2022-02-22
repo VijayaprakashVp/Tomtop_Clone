@@ -19,6 +19,7 @@ function hello(array) {
     // console.log(product);
     let link = document.createElement("a");
     link.href = `./product_detail.html?id=${product._id}`;
+    link.setAttribute("target", "_blank");
 
     let div = document.createElement("div");
 

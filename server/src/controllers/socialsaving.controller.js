@@ -22,7 +22,7 @@ router.get("", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
-  console.log("req:", req.id);
+  // console.log("req:", req.params.id);
 
   try {
     const socialsaving = await SocialSaving.findById(req.params.id);

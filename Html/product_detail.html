@@ -5,27 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../Styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Styles/footer.css" />
+    <link rel="stylesheet" href="../Styles/index.css" />
+    <link rel="stylesheet" href="../Styles/product_detail.css" />
   </head>
   <body>
-    Hello
+    <div id="navbar"></div>
+    <div id="description"></div>
+    <div id="footer_part"></div>
   </body>
 </html>
 
+<script type="module">
+  import nav_bar from "../components/nav_bar.js";
+  import footer from "../components/footer.js";
+
+  let navbar = document.getElementById("navbar");
+  let footer_part = document.getElementById("footer_part");
+
+  navbar.innerHTML = nav_bar();
+  footer_part.innerHTML = footer();
+</script>
 <script>
-    let link = (window.location).href;
-    
-    link = link.split("id=");
-    console.log('link:', link[1]);
-  function fecthbyid() {
+  let link = window.location.href;
+
+  link = link.split("id=");
+  console.log("link:", link[1]);
+
+  function fetchbyid() {
     try {
       fetch(`http://localhost:6789/socials/${link[1]}`)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          display(data);
         });
     } catch (e) {
       console.log(e.message);
     }
   }
-  fecthbyid();
+  fetchbyid();
+
+  function fetchbyid1() {
+    try {
+      fetch(`http://localhost:6789/hotdeals/${link[1]}`)
+        .then((res) => res.json())
+        .then((data) => {
+          display(data);
+        });
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+  fetchbyid1();
+
+  function fetchbyid2() {
+    try {
+      fetch(`http://localhost:6789/products/${link[1]}`)
+        .then((res) => res.json())
+        .then((data) => {
+          display(data);
+        });
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+  fetchbyid2();
+
+  function display(product) {
+    // console.log("array:", array);
+    document.title = product.product_name;
+
+    let description = document.getElementById("description");
+
+    let div = document.createElement("div");
+    div.setAttribute("id", "div1");
+    let div2 = document.createElement("div");
+    div2.setAttribute("id", "div2");
+
+    let img = document.createElement("img");
+    img.src = product.img_link;
+
+    let name = document.createElement("p");
+    name.setAttribute("id", "Product_name");
+    name.innerText = product.product_name;
+
+    let cur_price = document.createElement("p");
+    cur_price.setAttribute("id", "cur_price");
+    cur_price.innerText = "Discount Price" + "    " + product.current_price;
+
+    let reg_price = document.createElement("p");
+    reg_price.setAttribute("id", "reg_price");
+    reg_price.innerText = "Regular Price" + "   " + product.regular_price;
+
+    let refund = document.createElement("img");
+    refund.src = "https://i.ibb.co/9bW6Q6d/Screenshot-94.png";
+
+    let Add_to_cart = document.createElement("button");
+    Add_to_cart.setAttribute("id", "addbtn");
+    Add_to_cart.innerText = "Add to Cart";
+
+    div.append(img);
+    div2.append(name, cur_price, reg_price, Add_to_cart, refund);
+    description.append(div, div2);
+  }
 </script>
