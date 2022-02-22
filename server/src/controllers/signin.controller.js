@@ -35,13 +35,9 @@ router.get("/:id", async (req, res) => {
 
 router.patch(":id", async (req, res) => {
   try {
-    const signin = await Signin.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      {
-        new: true,
-      },
-    )
+    const signin = await Signin.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    })
       .lean()
       .exec();
     return res.status(200).send(signin);
@@ -52,9 +48,7 @@ router.patch(":id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   try {
-    const signin = await Signin.findByIdAndDelete(req.params.id)
-      .lean()
-      .exec();
+    const signin = await Signin.findByIdAndDelete(req.params.id).lean().exec();
     return res.status(200).send(signin);
   } catch (e) {
     return res.status(500).send(e.message);
