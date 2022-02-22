@@ -18,6 +18,9 @@ function hello1(array) {
   console.log("Hot_deals:", Hot_deals);
   array.forEach((product) => {
     // console.log(product);
+    let link = document.createElement("a");
+    link.href = `./product_detail.html?id=${product._id}`
+
     let div = document.createElement("div");
 
     let img = document.createElement("img");
@@ -34,6 +37,7 @@ function hello1(array) {
 
     div.append(img, name, cur_price, reg_price);
     // console.log((img, name, cur_price, reg_price));
-    Hot_deals.append(div);
+    link.append(div)
+    Hot_deals.append(link);
   });
 }

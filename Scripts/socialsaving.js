@@ -17,6 +17,9 @@ function hello(array) {
   console.log("Social_saving:", Social_saving);
   array.forEach((product) => {
     // console.log(product);
+    let link = document.createElement("a");
+    link.href = `./product_detail.html?id=${product._id}`;
+
     let div = document.createElement("div");
 
     let img = document.createElement("img");
@@ -32,7 +35,8 @@ function hello(array) {
     reg_price.innerText = product.regular_price;
 
     div.append(img, name, cur_price, reg_price);
+    link.append(div);
     // console.log((img, name, cur_price, reg_price));
-    Social_saving.append(div);
+    Social_saving.append(link);
   });
 }

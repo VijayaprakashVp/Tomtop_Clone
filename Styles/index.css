@@ -198,7 +198,7 @@ input {
   /* border: 1px solid red; */
   font-size: 15px;
   cursor: pointer;
-  margin-top: -1%;
+  margin-top: -6%;
   margin-left: 950%;
 }
 @keyframes animate__slideInUp2 {
@@ -250,4 +250,21 @@ input {
   color: #66667c;
   margin-top: -1.5%;
   margin-bottom: 1.5%;
+}
+#top_brands {
+  /* border: 3px solid red; */
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  margin-top: 1%;
+  padding: -1%;
+  align-items: center;
+}
+#top_brands img {
+  width: 95%;
+}
+#social-saving a,
+#Hot-deals a,
+#Pro-ducts a {
+  text-decoration: none;
+  color: black;
 }

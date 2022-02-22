@@ -18,6 +18,8 @@ function hello2(array) {
 
   array.forEach((product) => {
     // console.log(product);
+    let link = document.createElement("a");
+    link.href = `./product_detail.html?id=${product._id}`
     let div = document.createElement("div");
 
     let img = document.createElement("img");
@@ -34,6 +36,7 @@ function hello2(array) {
 
     div.append(img, name, cur_price, reg_price);
     // console.log((img, name, cur_price, reg_price));
-    all_product.append(div);
+    link.append(div)
+    all_product.append(link);
   });
 }

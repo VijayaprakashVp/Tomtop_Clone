@@ -3,7 +3,6 @@ const express = require("express");
 
 const router = express.Router();
 
-
 router.post("", async (req, res) => {
   try {
     const socialsaving = await SocialSaving.create(req.body);
@@ -23,6 +22,8 @@ router.get("", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
+  console.log("req:", req.id);
+
   try {
     const socialsaving = await SocialSaving.findById(req.params.id);
 
@@ -34,9 +35,13 @@ router.get("/:id", async (req, res) => {
 
 router.patch(":id", async (req, res) => {
   try {
-    const socialsaving = await SocialSaving.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    })
+    const socialsaving = await SocialSaving.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true,
+      },
+    )
       .lean()
       .exec();
     return res.status(200).send(socialsaving);
@@ -47,7 +52,9 @@ router.patch(":id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   try {
-    const socialsaving = await SocialSaving.findByIdAndDelete(req.params.id).lean().exec();
+    const socialsaving = await SocialSaving.findByIdAndDelete(req.params.id)
+      .lean()
+      .exec();
     return res.status(200).send(socialsaving);
   } catch (e) {
     return res.status(500).send(e.message);
