@@ -9,12 +9,16 @@ body {
   grid-template-columns: repeat(2, 50%);
   /* padding-top: -20%; */
 }
-#bill_id {
+.bill_id {
   display: grid;
   grid-template-columns: auto;
   /* grid-gap: -20%; */
   font-size: 15px;
   color: #989393;
+  /* text-align: right; */
+}
+.bill_id1 {
+  text-align: right;
 }
 #price {
   color: green;

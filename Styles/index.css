@@ -21,6 +21,9 @@ body {
   /* gap: 5%; */
   /* width: 25%; */
   margin-left: 3%;
+}#account a {
+  font-size: 30px;
+  margin-top: 5%;
 }
 #icon {
   width: 80px;
@@ -144,4 +147,29 @@ input {
   /* gap: 2%; */
   text-align: center;
   margin: 20px 60px;
+}
+#depart {
+  border: 1px solid red;
+  height: 70vh;
+  position: absolute;
+  background-color: #fff;
+  width: 20%;
+  left: 5.5%;
+  top: 38.15%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+#sub_depart {
+  display: none;
+  width: 60%;
+  border: 1px solid red;
+  height: 70vh;
+  position: absolute;
+  background-color: #fff;
+  left: 25.6%;
+  top: 38.15%;
+}
+#all_Products {
+  border: 1px solid red;
+  height: 180vh;
 }

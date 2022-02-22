@@ -8,8 +8,12 @@ app.use(cors());
 app.use(express.json());
 
 const SocialSavingController = require("./controllers/socialsaving.controller");
+const HotdealsController = require("./controllers/hotdeals.controller");
+const ProductsController = require("./controllers/products.controller");
 
 app.use("/socials", SocialSavingController);
+app.use("/hotdeals", HotdealsController);
+app.use("/products", ProductsController);
 
 app.listen(6789, async (req, res) => {
   try {

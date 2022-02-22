@@ -37,26 +37,32 @@ function nav_bar() {
         <span class="material-icons search">search</span>
       </div>
       <div id="account">
-      <button>
-      <span class="material-icons" id="icon">person_outline</span>
-      <span id="gif"
-        ><img
-          src="https://static.tomtop.com/tomtop/img/gift_icon.gif"
-          alt=""
-      /></span>
-      <p class="p1">Sign In</p>
-    </button>
-        
+        <a href="./Sign_In.html"
+          ><button>
+            <span class="material-icons" id="icon">person_outline</span>
+            <span id="gif"
+              ><img
+                src="https://static.tomtop.com/tomtop/img/gift_icon.gif"
+                alt=""
+            /></span>
+            <p class="p1">Sign In</p>
+          </button></a
+        >
+
         &nbsp;&nbsp;&nbsp;
-        <button>
-          <span class="material-icons" id="icon">favorite_border</span>
-          <p class="p1">Favourites</p>
-        </button>
+        <a href="#"
+          ><button>
+            <span class="material-icons" id="icon">favorite_border</span>
+            <p class="p1">Favourites</p>
+          </button></a
+        >
         &nbsp;&nbsp;&nbsp;
-        <button>
-          <span class="material-icons" id="icon">shopping_cart</span>
-          <p class="p1">Cart</p>
-        </button>
+        <a href="./cart.html"
+          ><button>
+            <span class="material-icons" id="icon">shopping_cart</span>
+            <p class="p1">Cart</p>
+          </button></a
+        >
       </div>
     </div>
     <div id="tags">
@@ -71,7 +77,7 @@ function nav_bar() {
   <!-- Menu -->
 
   <div id="menu">
-    <div id = "arr_check">
+    <div id="arr_check">
       <div class="material-icons menu">menu</div>
       <p><strong>Shop By Departments</strong></p>
     </div>
