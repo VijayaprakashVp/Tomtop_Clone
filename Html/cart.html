@@ -139,10 +139,9 @@
 
   function display1(array) {
     var cart_items = document.getElementById("cart_list");
-    var sub_Total = document.getElementById("sub_Total") 
-    var overall_Total = document.getElementById("overall_Total") 
+    var sub_Total = document.getElementById("sub_Total");
+    var overall_Total = document.getElementById("overall_Total");
     var total = 0;
-
 
     array.forEach((product) => {
       // console.log(product);
@@ -180,19 +179,13 @@
       final_div.append(div, div1);
       cart_items.append(final_div);
 
-      
       var sum = cur_price.innerText.split(" ");
-      console.log('sum:', sum)
+      console.log("sum:", sum);
 
       total += +sum[1];
-
     });
 
     overall_Total.innerText = "US$" + total;
     sub_Total.innerText = total;
   }
-
-  
-
-
 </script>
