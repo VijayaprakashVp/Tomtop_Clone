@@ -19,9 +19,8 @@ function hello2(array) {
   array.forEach((product) => {
     // console.log(product);
     let link = document.createElement("a");
-    link.href = `./product_detail.html?id=${product._id}`
+    link.href = `./product_detail.html?id=${product._id}`;
     link.setAttribute("target", "_blank");
-
 
     let div = document.createElement("div");
 
@@ -39,7 +38,7 @@ function hello2(array) {
 
     div.append(img, name, cur_price, reg_price);
     // console.log((img, name, cur_price, reg_price));
-    link.append(div)
+    link.append(div);
     all_product.append(link);
   });
 }
