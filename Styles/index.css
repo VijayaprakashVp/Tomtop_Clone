@@ -171,7 +171,7 @@ input {
   top: 40.5%;
 }
 #all_Products {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* height: 180vh; */
   width: 90%;
   margin: auto;
@@ -213,7 +213,7 @@ input {
   animation: animate__slideInUp2 0.5s ease-in;
 }
 #social-saving {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: grid;
   grid-gap: 1%;
   grid-template-columns: repeat(5, 19.25%);
@@ -221,21 +221,32 @@ input {
 #social-saving div,
 #Hot-deals div,
 #Pro-ducts div {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 2% 1%;
   height: 100%;
   padding-left: 2%;
 }
+#social-saving div p,
+#Hot-deals div p,
+#Pro-ducts div p {
+  /* border: 1px solid red; */
+  height: 6.5vh;
+  margin-top: 1%;
+}
 #social-saving div img,
 #Hot-deals div img,
 #Pro-ducts div img {
+  margin-bottom: 2%;
   width: 80%;
   margin: auto;
   padding-left: 2%;
 }
 #Hot-deals,
 #Pro-ducts {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  /* width: 95%; */
+  /* margin: auto; */
+  /* align-items: center; */
   display: grid;
   grid-gap: 1%;
   grid-template-columns: repeat(4, 24.25%);
@@ -267,4 +278,18 @@ input {
 #Pro-ducts a {
   text-decoration: none;
   color: black;
+}
+#social-saving #dis_price,
+#Hot-deals #dis_price,
+#Pro-ducts #dis_price {
+  /* border: 2px solid black; */
+  color: green;
+  font-size: 16px;
+}
+#social-saving #regular_price,
+#Hot-deals #regular_price,
+#Pro-ducts #regular_price {
+  text-decoration: line-through;
+  color: #666666;
+  font-size: 14px;
 }
