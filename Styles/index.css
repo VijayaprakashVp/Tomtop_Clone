@@ -225,6 +225,12 @@ input {
   margin: 2% 1%;
   height: 100%;
   padding-left: 2%;
+  transition: transform 0.2s;
+}
+#social-saving div img:hover,
+#Hot-deals div img:hover,
+#Pro-ducts div img:hover {
+  transform: scale(1.2);
 }
 #social-saving div p,
 #Hot-deals div p,
