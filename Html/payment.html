@@ -61,7 +61,7 @@
               />
             </form>
 
-            <button id="pay">PAY NOW</button>
+            <a href="#"><button id="pay">PAY NOW</button></a>
             <button id="cancel">CANCEL</button>
           </div>
         </div>
@@ -72,3 +72,44 @@
     </div>
   </body>
 </html>
+
+<script>
+
+function fetchbyid_checkout() {
+    try {
+      fetch(`http://localhost:6789/signup`)
+        .then((res) => res.json())
+        .then((data) => {
+          display1(data[0].cart);
+          console.log(data[0].cart);
+        });
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+  fetchbyid_checkout();
+
+  var total = 0;
+
+  function display1(array) {
+    var price = document.getElementById("price") 
+
+
+    array.forEach((product) => {
+
+      let cur_price = document.createElement("p");
+      cur_price.setAttribute("id", "cur_price");
+
+      cur_price.innerText = product.current_price;
+      
+      var sum = cur_price.innerText.split(" ");
+      // console.log('sum:', sum)
+
+      total += +sum[1];
+
+    });
+
+    price.innerText = "US$" + total;
+  }
+
+</script>

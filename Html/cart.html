@@ -49,7 +49,7 @@
                 >
               </div>
               <div id="cart_list">
-                <h1>Cart Items</h1>
+                <!-- <h1>Cart Items</h1> -->
                 <!--                     
                     
                         cart Items
@@ -65,9 +65,9 @@
                   <p>Discount :</p>
                   <p>Total :</p>
                 </div>
-                <div>
-                  <p>US$ 100</p>
-                  <p>US$ 100</p>
+                <div id="total_number">
+                  <p id="sub_Total">US$ 100</p>
+                  <p>US$ 0</p>
                   <p id="overall_Total">US$ 100</p>
                 </div>
               </div>
@@ -82,7 +82,9 @@
                 <p>Flash deals are not allowed with coupon and points</p>
               </div>
               <div id="proc_check">
-                <p id="checkout"><a href="../Html/checkout.html">Proceed to Checkout</a></p>
+                <p id="checkout">
+                  <a href="../Html/checkout.html">Proceed to Checkout</a>
+                </p>
                 <div>
                   <p id="buyer">Buyer Protection</p>
                 </div>
@@ -114,4 +116,83 @@
   let footer_part = document.getElementById("footer_part");
 
   footer_part.innerHTML = footer();
+</script>
+<script>
+  // let link = window.location.href;
+
+  // link = link.split("id=");
+  // console.log("link:", link[1]);
+
+  function fetchbyid_cart() {
+    try {
+      fetch(`http://localhost:6789/signup`)
+        .then((res) => res.json())
+        .then((data) => {
+          display1(data[0].cart);
+          console.log(data[0].cart);
+        });
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+  fetchbyid_cart();
+
+  function display1(array) {
+    var cart_items = document.getElementById("cart_list");
+    var sub_Total = document.getElementById("sub_Total") 
+    var overall_Total = document.getElementById("overall_Total") 
+    var total = 0;
+
+
+    array.forEach((product) => {
+      // console.log(product);
+      // let link = document.createElement("a");
+      // link.href = `./product_detail.html?id=${product._id}`;
+      // link.setAttribute("target", "_blank");
+
+      let div = document.createElement("div");
+      let div1 = document.createElement("div");
+      div1.setAttribute("id", "div_1");
+      let final_div = document.createElement("div");
+      final_div.setAttribute("id", "final_div");
+
+      let img = document.createElement("img");
+      img.src = product.img_link;
+
+      let name = document.createElement("p");
+      name.setAttribute("id", "Product_name");
+
+      name.innerText = product.product_name;
+
+      let cur_price = document.createElement("p");
+      cur_price.setAttribute("id", "cur_price");
+
+      cur_price.innerText = product.current_price;
+
+      // let reg_price = document.createElement("p");
+      // reg_price.setAttribute("id", "reg_price");
+
+      // reg_price.innerText = product.regular_price;
+
+      div.append(img);
+      div1.append(name, cur_price);
+      // link.append(div);
+      final_div.append(div, div1);
+      cart_items.append(final_div);
+
+      
+      var sum = cur_price.innerText.split(" ");
+      console.log('sum:', sum)
+
+      total += +sum[1];
+
+    });
+
+    overall_Total.innerText = "US$" + total;
+    sub_Total.innerText = total;
+  }
+
+  
+
+
 </script>

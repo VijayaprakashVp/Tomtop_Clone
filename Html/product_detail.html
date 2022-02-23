@@ -107,10 +107,41 @@
 
     let Add_to_cart = document.createElement("button");
     Add_to_cart.setAttribute("id", "addbtn");
+
+
+
+    // Add_to_cart.onclick = () => {
+
+    //   fetch(`http://localhost:2526/register`, {
+    //     method: "POST",
+    //     headers: { "Content-type": "application/json" },
+    //     body: JSON.stringify(form_details),
+    //   })
+    //     .then((res) => res.json())fetch(`http://localhost:2526/register`, {
+    //     method: "POST",
+    //     headers: { "Content-type": "application/json" },
+    //     body: JSON.stringify(form_details),
+    //   })
+    //     .then((res) => res.json())fetch(`http://localhost:2526/register`, {
+    //     method: "POST",
+    //     headers: { "Content-type": "application/json" },
+    //     body: JSON.stringify(form_details),
+    //   })
+    //     .then((res) => res.json())
+
+    // };
+
+
+
+
     Add_to_cart.innerText = "Add to Cart";
 
     div.append(img);
     div2.append(name, cur_price, reg_price, Add_to_cart, refund);
     description.append(div, div2);
+  }
+
+  function addcart() {
+    alert("Hi");
   }
 </script>

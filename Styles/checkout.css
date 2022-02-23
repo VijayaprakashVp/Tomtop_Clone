@@ -156,9 +156,10 @@
 }
 #cart_items #cart_list {
   border: 1px solid black;
+  border-radius: 2%;
   width: 100%;
   margin-top: 2%;
-  height: 60vh;
+  /* height: 60vh; */
 }
 #footer_part {
   /* border: 1px solid red; */
@@ -175,9 +176,10 @@
   margin-bottom: 5%;
   /* grid-template-columns: repeat(2,20%); */
 }
-/* #address_preview {
-  border: 1px solid red;
-} */
+#address_preview {
+  /* border: 1px solid red; */
+  background-color: rgb(178, 207, 221);
+}
 #label_input,
 #label {
   /* border: 1px solid black; */
@@ -205,8 +207,9 @@
   gap: 2%;
   /* grid-template-rows: 20%, 80%; */
   border: 1px solid black;
+  border-radius: 1%;
   width: 69%;
-  height: 60vh;
+  /* height: 60vh; */
 }
 #card_Image {
   display: flex;
@@ -214,35 +217,52 @@
   align-items: center;
   /* margin-bottom: 80%; */
   height: 10vh;
-  border: 1px solid red;
+  border: 1px solid rgb(175, 168, 168);
   width: 30%;
+  cursor: pointer;
 }
 #card_Image img {
   width: 100%;
+  cursor: pointer;
   margin-left: 5%;
 }
 #cards {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 100%;
   margin: 0% 1.5%;
 }
 #card_img_big {
-    display: flex;
-    flex-direction: row;
-    gap: 5%;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 500;
-    color: #6a6a6a;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #6a6a6a;
 }
 #card_img_big img {
-    width: 60%;
+  width: 60%;
 }
 #bill_address {
-    font-size: 14px;
-    color: black;
+  font-size: 14px;
+  color: black;
 }
 #add_check {
-    font-size: 13px;
-    margin-top: 2%;
+  font-size: 13px;
+  margin-top: 2%;
+}
+#price1 {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 65% 35%;
+  margin-top: -5%;
+  color: #666666;
+  height: 20vh;
+}
+#all_total {
+  /* border:1px solid red; */
+  margin-left: -15%;
+  width: 100%;
+  text-align: end;
 }

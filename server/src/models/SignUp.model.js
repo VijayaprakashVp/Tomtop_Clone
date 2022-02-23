@@ -5,8 +5,8 @@ const signupSchema = new mongoose.Schema(
   {
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    confirm_password: { type: String, required: true },
-    cart: { required: false },
+    // confirm_password: { type: String, required: true },
+    cart: [],
   },
   {
     versionKey: false,

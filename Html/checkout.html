@@ -36,7 +36,7 @@
               <div id="cart_list">
                 <p>Please Enter the Shipping Address</p>
 
-                <form action="">
+                <form action="" onsubmit="show_address()">
                   <div id="address_form">
                     <div id="in_address">
                       <div id="label">
@@ -45,24 +45,25 @@
                         ><label for=""> City : </label>
                       </div>
                       <div id="label_input">
-                        <input type="text" placeholder="Name" />
-                        <input type="text" placeholder="Street" />
-                        <input type="text" placeholder="City" />
+                        <input type="text" placeholder="Name" id="name_1"/>
+                        <input type="text" placeholder="Street" id="street"/>
+                        <input type="text" placeholder="City" id="city"/>
                       </div>
                     </div>
                     <div id="in_address">
                       <div id="label">
-                        <label for=""> State : </label
-                        ><label for=""> PIN Code : </label
-                        ><label for=""> Contact : </label>
+                        <label for="" > State : </label
+                        ><label for="" > PIN Code : </label
+                        ><label for="" > Contact : </label>
                       </div>
                       <div id="label_input">
-                        <input type="text" placeholder="State" />
-                        <input type="number" placeholder="PIN CODE" />
-                        <input type="number" placeholder="Contact Number" />
+                        <input type="text" placeholder="State" id="state"/>
+                        <input type="number" placeholder="PIN CODE" id="pin_code"/>
+                        <input type="number" placeholder="Contact Number" id="contact"/>
                       </div>
                     </div>
                   </div>
+                  <button id="address_submit">Submit</button>
                   <div>
                     
                   </div>
@@ -71,7 +72,8 @@
                 <hr>
                 <div id="address_preview">
                     <div>Please check your Shipping Address : </div>
-                    <p><h1>Address</h1></p>
+                    <p>Estimated Delivery in 5 Business Days!</p>
+                    <p><h3 id="Address_Check">Address</h3></p>
                 </div>
               </div>
             </div>
@@ -83,8 +85,8 @@
                   <p>Discount :</p>
                   <p>Total :</p>
                 </div>
-                <div>
-                  <p>US$ 100</p>
+                <div id="all_total">
+                  <p id="sub_Total">US$ 100</p>
                   <p>US$ 100</p>
                   <p id="overall_Total">US$ 100</p>
                 </div>
@@ -149,7 +151,7 @@
                   </div>
 
                   <div>
-                      <h1>Address_Check</h1>
+                      <h3 id="address_check_1">Address_Check</h3>
                   </div>
               </div>
             </div>
@@ -166,4 +168,79 @@
   let footer_part = document.getElementById("footer_part");
 
   footer_part.innerHTML = footer();
+</script>
+
+
+<script>
+
+
+  function show_address () {
+
+    event.preventDefault();
+
+    let Address_Check = document.getElementById("Address_Check");
+    let address_check_1 = document.getElementById("address_check_1");
+
+  let name_1 = document.getElementById("name_1").value
+  // console.log('name:', name_1)
+  let street = document.getElementById("street").value
+  let city = document.getElementById("city").value
+  let state = document.getElementById("state").value
+  let pin_code = document.getElementById("pin_code").value
+  let contact = document.getElementById("contact").value
+
+  Address_Check.innerText = name_1 + "," + street + "," + city + "," + state + "," + pin_code + "." + "Ph." + contact;
+  address_check_1.innerText = name_1 + "," + street + "," + city + "," + state + "," + pin_code + "." + "Ph." + contact;
+  // Address_Check.innerText ="Hello";
+  // console.log('Address_Check:', Address_Check)
+  // console.log(name_1 + "," + street + "," + city + "," + state + "," + pin_code + "." + "Ph." + contact)
+
+  }
+
+
+</script>
+<script>
+  
+  function fetchbyid_checkout() {
+    try {
+      fetch(`http://localhost:6789/signup`)
+        .then((res) => res.json())
+        .then((data) => {
+          display1(data[0].cart);
+          console.log(data[0].cart);
+        });
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+  fetchbyid_checkout();
+
+  var total = 0;
+
+  function display1(array) {
+    var sub_Total = document.getElementById("sub_Total") 
+    var overall_Total = document.getElementById("overall_Total")
+
+
+    array.forEach((product) => {
+
+      let cur_price = document.createElement("p");
+      cur_price.setAttribute("id", "cur_price");
+
+      cur_price.innerText = product.current_price;
+      
+      var sum = cur_price.innerText.split(" ");
+      // console.log('sum:', sum)
+
+      total += +sum[1];
+
+    });
+
+    overall_Total.innerText = "US$" + total;
+    // console.log('overall_Total:', overall_Total)
+    sub_Total.innerText = total;
+    console.log('sub_Total:', sub_Total)
+  }
+
+
 </script>
