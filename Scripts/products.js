@@ -23,8 +23,6 @@ function hello2(array) {
     link.setAttribute("target", "_blank");
 
     let div = document.createElement("div");
-    // let div2 = document.createElement("div");
-    // div2.setAttribute("id" , "product-name")
 
     let img = document.createElement("img");
     img.src = product.img_link;

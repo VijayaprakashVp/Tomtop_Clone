@@ -33,7 +33,7 @@ router.get("/:id", async (req, res) => {
 });
 
 router.patch("/:id", async (req, res) => {
-  console.log(req.params.id, req.body);
+  // console.log(req.params.id, req.body);
   try {
     const find_name = await Users.findById(req.params.id);
     // console.log("find_name:", find_name.cart);

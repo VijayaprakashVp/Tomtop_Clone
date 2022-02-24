@@ -14,7 +14,7 @@ socialsaving();
 
 function hello(array) {
   var Social_saving = document.getElementById("social-saving");
-  console.log("Social_saving:", Social_saving);
+  // console.log("Social_saving:", Social_saving);
   array.forEach((product) => {
     // console.log(product);
     let link = document.createElement("a");

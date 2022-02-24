@@ -123,11 +123,6 @@
   footer_part.innerHTML = footer();
 </script>
 <script>
-  // let link = window.location.href;
-
-  // link = link.split("id=");
-  // console.log("link:", link[1]);
-
   function fetchbyid_cart() {
     // console.log("Hey");
     let user_id = "62164a86451d44799d6a67bc";
@@ -164,18 +159,63 @@
 
       let name = document.createElement("p");
       name.setAttribute("id", "Product_name");
-
       name.innerText = product.product_name;
 
-      let cur_price = document.createElement("p");
+      let Qty_div = document.createElement("div");
+      Qty_div.setAttribute("id", "Qty");
+      var count = 1;
+
+      var cur_price = document.createElement("p");
       cur_price.setAttribute("id", "cur_price");
 
       cur_price.innerText = product.current_price;
 
+      // Minus Quantity -----------
+
+      let minus = document.createElement("p");
+      minus.innerText = "-";
+
+      minus.addEventListener("click", () => {
+        if (count > 1) {
+          count--;
+          show_qty.innerText = +count;
+          console.log(count);
+          let product_sum = sum[1];
+          cur_price.innerText = "US$ " + (product_sum * count).toFixed(2);
+
+          var final_total = +sum[1] * count - 1;
+
+          sub_Total.innerText = "US$" + (total + final_total).toFixed(2);
+          overall_Total.innerText = "US$" + (total + final_total).toFixed(2);
+        }
+      });
+
+      var show_qty = document.createElement("p");
+      show_qty.innerText = 1;
+
+      // Plus Quantity -----------
+
+      let plus = document.createElement("p");
+      plus.innerText = "+";
+      plus.addEventListener("click", () => {
+        if (count <= 9) {
+          count++;
+          show_qty.innerText = count;
+          // console.log(count);
+          let product_sum = sum[1];
+          cur_price.innerText = "US$ " + product_sum * count;
+
+          var final_total = +sum[1] * count - 1;
+
+          sub_Total.innerText = "US$" + (total + final_total).toFixed(2);
+          overall_Total.innerText = "US$" + (total + final_total).toFixed(2);
+        }
+      });
+
       div.append(img);
       div1.append(name, cur_price);
-      // link.append(div);
-      final_div.append(div, div1);
+      Qty_div.append(minus, show_qty, plus);
+      final_div.append(div, Qty_div, div1);
       cart_items.append(final_div);
 
       var sum = cur_price.innerText.split(" ");

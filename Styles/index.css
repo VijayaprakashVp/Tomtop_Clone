@@ -232,7 +232,7 @@ input {
 #social-saving div:hover,
 #Hot-deals div:hover,
 #Pro-ducts div:hover {
-  transform: scale(1.2);
+  transform: scale(0.9);
 }
 #social-saving div p,
 #Hot-deals div p,
@@ -240,6 +240,9 @@ input {
   /* border: 1px solid red; */
   height: 6.5vh;
   margin-top: 1%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #social-saving div img,
 #Hot-deals div img,

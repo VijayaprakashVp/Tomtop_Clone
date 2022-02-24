@@ -15,7 +15,7 @@ Hotdeals();
 
 function hello1(array) {
   var Hot_deals = document.getElementById("Hot-deals");
-  console.log("Hot_deals:", Hot_deals);
+  // console.log("Hot_deals:", Hot_deals);
   array.forEach((product) => {
     // console.log(product);
     let link = document.createElement("a");
