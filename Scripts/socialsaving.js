@@ -22,8 +22,6 @@ function hello(array) {
     link.setAttribute("target", "_blank");
 
     let div = document.createElement("div");
-    // let div2 = document.createElement("div");
-    // div2.setAttribute("id" , "product-name")
 
     let img = document.createElement("img");
     img.src = product.img_link;
@@ -40,9 +38,7 @@ function hello(array) {
     reg_price.setAttribute("id", "regular_price");
 
     div.append(img, name, cur_price, reg_price);
-    // div2.append();
     link.append(div);
-    // console.log((img, name, cur_price, reg_price));
     Social_saving.append(link);
   });
 }

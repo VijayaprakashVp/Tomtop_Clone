@@ -220,6 +220,14 @@ input {
   grid-gap: 1%;
   grid-template-columns: repeat(5, 19.25%);
 }
+/* #social-saving div {
+  border: 1px solid red;
+  
+  transition: transform 0.2s;
+} */
+/* #social-saving div:hover{
+  transform: scale(1.1);
+} */
 #social-saving div,
 #Hot-deals div,
 #Pro-ducts div {
@@ -229,9 +237,9 @@ input {
   padding-left: 2%;
   transition: transform 0.2s;
 }
-#social-saving div img:hover,
-#Hot-deals div img:hover,
-#Pro-ducts div img:hover {
+#social-saving div:hover,
+#Hot-deals div:hover,
+#Pro-ducts div:hover {
   transform: scale(1.2);
 }
 #social-saving div p,
