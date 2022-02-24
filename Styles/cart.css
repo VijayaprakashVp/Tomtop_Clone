@@ -180,6 +180,7 @@
   width: 100%;
   margin-top: 2%;
   /* height: 70vh; */
+  padding-bottom: 2.6%;
   display: grid;
   grid-template-columns: repeat(1, 100%);
   grid-gap: 1%;
@@ -195,7 +196,7 @@
   flex-direction: row;
 }
 #cart_items div #Qty {
-  border: 1px solid red;
+  border: 1px solid rgb(209, 208, 208);
   width: 10%;
   margin: auto;
   margin-left: -3%;
@@ -208,6 +209,7 @@
   display: flex;
   flex-direction: row;
   margin: 15% 8%;
+  cursor: pointer;
 }
 #cart_list div img {
   width: 70%;
@@ -226,7 +228,7 @@
   margin-right: 2%;
 }
 #final_div {
-  border: 1px solid red;
+  border-bottom: 1px solid rgb(207, 198, 198);
   display: flex;
   flex-direction: row;
   width: 100%;
