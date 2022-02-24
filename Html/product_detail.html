@@ -108,26 +108,28 @@
     let Add_to_cart = document.createElement("button");
     Add_to_cart.setAttribute("id", "addbtn");
 
-    // Add_to_cart.onclick = () => {
+    //---------------
 
-    //   fetch(`http://localhost:2526/register`, {
-    //     method: "POST",
-    //     headers: { "Content-type": "application/json" },
-    //     body: JSON.stringify(form_details),
-    //   })
-    //     .then((res) => res.json())fetch(`http://localhost:2526/register`, {
-    //     method: "POST",
-    //     headers: { "Content-type": "application/json" },
-    //     body: JSON.stringify(form_details),
-    //   })
-    //     .then((res) => res.json())fetch(`http://localhost:2526/register`, {
-    //     method: "POST",
-    //     headers: { "Content-type": "application/json" },
-    //     body: JSON.stringify(form_details),
-    //   })
-    //     .then((res) => res.json())
+    Add_to_cart.onclick = () => {
+      var user_id = "62164a86451d44799d6a67bc";
+      // console.log('product:', product)
 
-    // };
+      try {
+        fetch(`http://localhost:6789/users/${user_id}`, {
+          method: "PATCH",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(product),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            alert("Product Added Successfully");
+          });
+      } catch (e) {
+        console.log(e.message);
+      }
+    };
+
+    //---------------
 
     Add_to_cart.innerText = "Add to Cart";
 

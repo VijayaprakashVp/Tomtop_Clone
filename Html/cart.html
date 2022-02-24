@@ -67,7 +67,7 @@
                 </div>
                 <div id="total_number">
                   <p id="sub_Total">US$ 100</p>
-                  <p>US$ 0</p>
+                  <p id="discount">US$ 0</p>
                   <p id="overall_Total">US$ 100</p>
                 </div>
               </div>
@@ -75,7 +75,12 @@
                 <p>+Apply a Promotion Code</p>
               </div>
               <div id="input_promo">
-                <input type="text" name="" id="" placeholder="Promo Code" />
+                <input
+                  type="text"
+                  name=""
+                  id="promo_Code"
+                  placeholder="Promo Code"
+                />
                 <span>Apply</span>
               </div>
               <div id="coupon_text">
@@ -124,12 +129,14 @@
   // console.log("link:", link[1]);
 
   function fetchbyid_cart() {
+    // console.log("Hey");
+    let user_id = "62164a86451d44799d6a67bc";
     try {
-      fetch(`http://localhost:6789/signup`)
+      fetch(`http://localhost:6789/users/${user_id}`)
         .then((res) => res.json())
         .then((data) => {
-          display1(data[0].cart);
-          console.log(data[0].cart);
+          display1(data.cart);
+          console.log(data.cart);
         });
     } catch (e) {
       console.log(e.message);
@@ -141,14 +148,11 @@
     var cart_items = document.getElementById("cart_list");
     var sub_Total = document.getElementById("sub_Total");
     var overall_Total = document.getElementById("overall_Total");
+    // var discount = document.getElementById("discount");
+    // var coupon = document.getElementById("promo_Code").value
     var total = 0;
 
     array.forEach((product) => {
-      // console.log(product);
-      // let link = document.createElement("a");
-      // link.href = `./product_detail.html?id=${product._id}`;
-      // link.setAttribute("target", "_blank");
-
       let div = document.createElement("div");
       let div1 = document.createElement("div");
       div1.setAttribute("id", "div_1");
@@ -168,11 +172,6 @@
 
       cur_price.innerText = product.current_price;
 
-      // let reg_price = document.createElement("p");
-      // reg_price.setAttribute("id", "reg_price");
-
-      // reg_price.innerText = product.regular_price;
-
       div.append(img);
       div1.append(name, cur_price);
       // link.append(div);
@@ -180,12 +179,17 @@
       cart_items.append(final_div);
 
       var sum = cur_price.innerText.split(" ");
-      console.log("sum:", sum);
+      // console.log("sum:", sum);
 
       total += +sum[1];
     });
 
-    overall_Total.innerText = "US$" + total;
-    sub_Total.innerText = total;
+    // if (coupon == "TOM30") {
+    // var temp = overall_Total * 30/100;
+    // discount.innerText = temp;
+    // }
+
+    overall_Total.innerText = "US$" + total.toFixed(2);
+    sub_Total.innerText = total.toFixed(2);
   }
 </script>
