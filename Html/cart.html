@@ -110,7 +110,7 @@
           </div>
         </div>
 
-        <div id="footer_part"></div>
+        <div id="footer_part" style="color: blue"></div>
       </div>
     </div>
   </body>
@@ -118,14 +118,14 @@
 <script type="module">
   import footer from "../components/footer.js";
 
-  let footer_part = document.getElementById("footer_part");
+  var footer_part = document.getElementById("footer_part");
 
   footer_part.innerHTML = footer();
 </script>
 <script>
   function fetchbyid_cart() {
     // console.log("Hey");
-    let user_id = "62164a86451d44799d6a67bc";
+    var user_id = "62164a86451d44799d6a67bc";
     try {
       fetch(`http://localhost:6789/users/${user_id}`)
         .then((res) => res.json())
@@ -148,42 +148,46 @@
     var total = 0;
 
     array.forEach((product) => {
-      let div = document.createElement("div");
-      let div1 = document.createElement("div");
+      var div = document.createElement("div");
+      var div1 = document.createElement("div");
       div1.setAttribute("id", "div_1");
-      let final_div = document.createElement("div");
+      var final_div = document.createElement("div");
       final_div.setAttribute("id", "final_div");
 
-      let img = document.createElement("img");
+      var img = document.createElement("img");
       img.src = product.img_link;
 
-      let name = document.createElement("p");
+      var name = document.createElement("p");
       name.setAttribute("id", "Product_name");
       name.innerText = product.product_name;
 
-      let Qty_div = document.createElement("div");
+      var Qty_div = document.createElement("div");
       Qty_div.setAttribute("id", "Qty");
       var count = 1;
 
       var cur_price = document.createElement("p");
       cur_price.setAttribute("id", "cur_price");
-
       cur_price.innerText = product.current_price;
+
+      var dlt_product = document.createElement("button");
+      dlt_product.innerText = "Remove";
+
 
       // Minus Quantity -----------
 
-      let minus = document.createElement("p");
+      var minus = document.createElement("p");
       minus.innerText = "-";
+      var final_total;
 
       minus.addEventListener("click", () => {
         if (count > 1) {
           count--;
           show_qty.innerText = +count;
-          console.log(count);
-          let product_sum = sum[1];
+          // console.log(count);
+          var product_sum = sum[1];
           cur_price.innerText = "US$ " + (product_sum * count).toFixed(2);
 
-          var final_total = +sum[1] * count - 1;
+          final_total = +sum[1] * count;
 
           sub_Total.innerText = "US$" + (total + final_total).toFixed(2);
           overall_Total.innerText = "US$" + (total + final_total).toFixed(2);
@@ -195,25 +199,33 @@
 
       // Plus Quantity -----------
 
-      let plus = document.createElement("p");
+      var plus = document.createElement("p");
       plus.innerText = "+";
       plus.addEventListener("click", () => {
         if (count <= 9) {
           count++;
           show_qty.innerText = count;
           // console.log(count);
-          let product_sum = sum[1];
+          var product_sum = sum[1];
           cur_price.innerText = "US$ " + product_sum * count;
 
-          var final_total = +sum[1] * count - 1;
+          var final_total = +sum[1] * count;
 
           sub_Total.innerText = "US$" + (total + final_total).toFixed(2);
           overall_Total.innerText = "US$" + (total + final_total).toFixed(2);
         }
       });
 
+      dlt_product.addEventListener("click", () => {
+
+
+
+
+        final_div.setAttribute("style", "display:none");
+      });
+
       div.append(img);
-      div1.append(name, cur_price);
+      div1.append(name, cur_price, dlt_product);
       Qty_div.append(minus, show_qty, plus);
       final_div.append(div, Qty_div, div1);
       cart_items.append(final_div);

@@ -81,8 +81,12 @@
   border: 1px solid red;
 }
 #total {
-  border: 1px solid black;
-  /* height: 50vh; */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  border: 1px solid rgb(189, 181, 181);
+  height: 80vh;
+  padding: 1%;
   margin-left: 10%;
   margin-top: -5%;
 }
@@ -179,8 +183,11 @@
   border: 1px solid black;
   width: 100%;
   margin-top: 2%;
-  /* height: 70vh; */
+  /* height: 60vh; */
   padding-bottom: 2.6%;
+  overflow: scroll;
+  max-height: 50vh;
+  min-height: 25vh;
   display: grid;
   grid-template-columns: repeat(1, 100%);
   grid-gap: 1%;

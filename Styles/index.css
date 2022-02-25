@@ -215,15 +215,17 @@ input {
   animation: animate__slideInUp2 0.5s ease-in;
 }
 #social-saving {
-  /* border: 1px solid red; */
+  /* border-left: 1px solid black;
+  border-right: 1px solid black; */
   display: grid;
+  padding-bottom:1% ;
   grid-gap: 1%;
   grid-template-columns: repeat(5, 19.25%);
 }
 #social-saving div,
 #Hot-deals div,
 #Pro-ducts div {
-  /* border: 1px solid black; */
+  border: 1px solid rgb(180, 170, 170);
   margin: 2% 1%;
   height: 100%;
   padding-left: 2%;
