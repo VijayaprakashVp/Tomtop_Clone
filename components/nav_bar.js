@@ -45,7 +45,7 @@ function nav_bar() {
                 src="https://static.tomtop.com/tomtop/img/gift_icon.gif"
                 alt=""
             /></span>
-            <p class="p1">Sign In</p>
+            <p class="p1" id="user_name">Sign In</p>
           </button></a
         >
 

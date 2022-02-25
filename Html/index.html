@@ -128,4 +128,23 @@
   navbar.innerHTML = nav_bar();
   footer_part.innerHTML = footer();
   topbrands.innerHTML = topbrand();
+
+  let user_name = document.getElementById("user_name");
+
+  function loadData(key) {
+    try {
+      let data = window.localStorage.getItem(key);
+      data = JSON.parse(data);
+      return data;
+    } catch (e) {
+      console.log("e:", e);
+      return undefined;
+    }
+  }
+
+  
+  let userdetails = loadData("userdetails");
+  
+  user_name.innerText = userdetails.email;
+
 </script>

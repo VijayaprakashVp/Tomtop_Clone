@@ -63,6 +63,7 @@ form input {
   color: white;
   font-size: 16px;
   margin-top: 6%;
+  cursor: pointer;
 }
 .sign_up_link {
   /* border: 1px solid red; */

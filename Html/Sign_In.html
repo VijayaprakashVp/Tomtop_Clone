@@ -37,16 +37,16 @@
         <div id="sign_in_form">
           <form action="">
             <!-- <span class="material-icons">email</span> -->
-            <input type="email" placeholder="Email address" />
+            <input type="email" placeholder="Email address" / id="email">
             <br />
             <br />
             <!-- <span class="material-icons">lock</span> -->
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" / id="password">
             <br />
           </form>
           <a href="#" class="forgot_Password">Forgot your password</a>
           <div>
-            <button id="signin_button">Sign In</button>
+            <button id="signin_button" onclick="login()">Sign In</button>
             <p class="sign_up_link">
               New To Tomtop? &nbsp;
               <a href="./Sign_Up.html">Create Your Account</a>
@@ -57,3 +57,45 @@
     </div>
   </body>
 </html>
+
+<script>
+  function login() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    let obj = {
+      email,
+      password,
+    };
+    // console.log("obj:", obj);
+    try {
+      fetch(`http://localhost:6789/login`, {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(obj),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.message) {
+            alert(data.message);
+          } else {
+            alert("Logged in Successfully");
+            saveData("userdetails", data);
+            window.location.href = "index.html";
+          }
+        });
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+
+  
+
+  function saveData(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+  }
+
+  function clearData() {
+    localStorage.clear();
+  }
+</script>

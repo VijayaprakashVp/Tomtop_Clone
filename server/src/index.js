@@ -10,12 +10,16 @@ app.use(express.json());
 const SocialSavingController = require("./controllers/socialsaving.controller");
 const HotdealsController = require("./controllers/hotdeals.controller");
 const ProductsController = require("./controllers/products.controller");
-const usersController = require("./controllers/user.controller");
+// const usersController = require("./controllers/user.controller");
+const { register, login, check } = require("./controllers/auth.controller");
 
 app.use("/socials", SocialSavingController);
 app.use("/hotdeals", HotdealsController);
 app.use("/products", ProductsController);
-app.use("/users", usersController);
+// app.use("/users", usersController);
+app.post("/register", register);
+app.post("/login", login);
+app.get("/login", check);
 
 app.listen(6789, async (req, res) => {
   try {
