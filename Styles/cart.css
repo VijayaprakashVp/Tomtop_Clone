@@ -40,7 +40,7 @@
 #cart {
   /* border: 1px solid red; */
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 20% 80%;
   font-family: "Times New Roman";
   padding-left: 3%;
   margin: -2.5% 0%;
@@ -48,14 +48,25 @@
   color: #999999;
   width: 75%;
 }
-#price {
+#qty_item {
   /* border: 1px solid red; */
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
+  display: flex;
+  flex-direction: row;
+  gap: 50%;
+}
+#price {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  /* grid-template-columns: repeat(3, 30%); */
   height: 7vh;
-  text-align: center;
+  gap: 55%;
+  margin-left: 54%;
+  width: 20%;
+  text-align: right;
   color: #999999;
   font-size: 14px;
+  /* margin-left: -20%; */
 }
 #cart_items {
   /* border: 1px solid red; */
@@ -150,7 +161,7 @@
 #checkout {
   width: 98%;
   margin: auto;
-  height: 3vh;
+  /* height: 3vh; */
   padding: 3% 0%;
   text-align: center;
   /* border: 1px solid red;  */
@@ -227,12 +238,19 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-left: -2%;
 }
 #div_1 p:nth-child(2) {
   /* border: 1px solid red; */
   text-align: right;
   margin-left: auto;
   margin-right: 2%;
+}
+#div_1 button {
+  border: 1px solid rgb(167, 160, 160);
+  margin: auto;
+  height: 4vh;
+  cursor: pointer;
 }
 #final_div {
   border-bottom: 1px solid rgb(207, 198, 198);
