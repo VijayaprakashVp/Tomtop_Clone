@@ -1,0 +1,40 @@
+.style {
+  width: 900px;
+  height: 500px;
+  /* border: 1px solid black; */
+  margin: auto;
+  margin-top: 100px;
+  align-content: center;
+  box-sizing: border-box;
+  padding: 100px;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+}
+.loading--full-height {
+  align-items: center;
+  height: 100%;
+}
+.font {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  justify-content: center;
+  text-align: center;
+}
+.loading::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 10px solid #c9cacc;
+  border-top-color: #2874f0;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}

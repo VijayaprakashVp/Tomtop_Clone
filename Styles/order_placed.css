@@ -1,0 +1,16 @@
+img {
+    width:60%
+}
+button {
+    /* border: 1px solid red; */
+    height: 7vh;
+    background-color: rgb(229, 233, 224);
+    border-radius: 5%;
+    color: rgb(64, 64, 102);
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+p {
+    margin-left: 20%;
+}

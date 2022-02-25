@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirming Order</title>
+    <link rel="stylesheet" href="../Styles/payment_confirmation.css" />
+  </head>
+
+  <body>
+    <div class="style">
+      <p class="font">Please wait, we are processing your request...</p>
+      <div class="loading"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function loadingPage2() {
+    setTimeout(() => {
+      document.location.href = "order_placed.html";
+    }, 5000);
+  }
+
+  loadingPage2();
+</script>
