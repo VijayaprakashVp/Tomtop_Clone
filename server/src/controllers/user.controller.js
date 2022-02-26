@@ -36,20 +36,26 @@ router.patch("/:id", async (req, res) => {
   // console.log(req.params.id, req.body);
   try {
     const find_name = await Users.findById(req.params.id);
-    // console.log("find_name:", find_name.cart);
     const cart_list = find_name.cart;
     cart_list.push(req.body);
-    // console.log("cart_list:", cart_list);
 
-    const user = await Users.updateOne(
-      { id: req.params.id },
-      {
-        $set: { cart: cart_list },
-      },
-    )
-      .lean()
-      .exec();
+    const body = {
+      cart: cart_list,
+    };
+
+    const user = await Users.findByIdAndUpdate(req.params.id, body);
+
     return res.status(200).send(user);
+
+    // const user = await Users.updateOne(
+    //   { id: req.params.id },
+    //   {
+    //     $set: { cart: cart_list },
+    //   },
+    // )
+    //   .lean()
+    //   .exec();
+    // return res.status(200).send(user);
   } catch (e) {
     return res.status(500).send(e.message);
   }

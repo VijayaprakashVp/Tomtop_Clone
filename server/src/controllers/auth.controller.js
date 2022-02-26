@@ -5,10 +5,10 @@ const Users = require("../models/user.model");
 
 const register = async (req, res) => {
   // console.log("user:");
-  console.log("req.bod:", req.body);
+  // console.log("req.bod:", req.body);
   try {
     const user = await Users.findOne({ email: req.body.email });
-    console.log("user:", user);
+    // console.log("user:", user);
 
     if (user) {
       return res

@@ -66,9 +66,9 @@
                   <p>Total :</p>
                 </div>
                 <div id="total_number">
-                  <p id="sub_Total">US$ 100</p>
+                  <p id="sub_Total">US$ 67.16</p>
                   <p id="discount">US$ 0</p>
-                  <p id="overall_Total">US$ 100</p>
+                  <p id="overall_Total">US$ 67.16</p>
                 </div>
               </div>
               <div id="promo">
@@ -117,6 +117,8 @@
     </div>
   </body>
 </html>
+
+
 <script type="module">
   import footer from "../components/footer.js";
 
@@ -125,10 +127,23 @@
   footer_part.innerHTML = footer();
 </script>
 <script>
+  function loadData(key) {
+    try {
+      let data = window.localStorage.getItem(key);
+      data = JSON.parse(data);
+      return data;
+    } catch (e) {
+      console.log("e:", e);
+      return undefined;
+    }
+  }
+
   function fetchbyid_cart() {
-    // console.log("Hey");
     // var user_id = "62164a86451d44799d6a67bc";
-    var user_id = "62190579345916ab08df6d8f";
+    // var user_id = "62190579345916ab08df6d8f";
+
+    var user_id = loadData("userdetails")._id;
+
     try {
       fetch(`http://localhost:6789/users/${user_id}`)
         .then((res) => res.json())
@@ -147,7 +162,6 @@
     var sub_Total = document.getElementById("sub_Total");
     var overall_Total = document.getElementById("overall_Total");
     // var discount = document.getElementById("discount");
-    // var coupon = document.getElementById("promo_Code").value
     var check_outbtn = document.getElementById("check_out_btn");
     var total = 0;
 
@@ -200,7 +214,6 @@
           // check_outbtn.innerText =
           //   "Proceed to Checkout " + overall_Total.innerText;
         } else {
-          
         }
       });
 
@@ -215,11 +228,9 @@
         if (count <= 9) {
           count++;
           show_qty.innerText = count;
-          // console.log(count);
           var product_sum = sum[1];
-          cur_price.innerText = "US$ " + product_sum * count;
 
-          var final_total = +sum[1] * count;
+          var final_total = +sum[1] * 1; // product qty price
 
           sub_Total.innerText = "US$" + (total + final_total).toFixed(2);
           overall_Total.innerText = "US$" + (total + final_total).toFixed(2);
@@ -254,6 +265,7 @@
       total += +sum[1];
     });
 
+    // var coupon = document.getElementById("promo_Code").value
     // if (coupon == "TOM30") {
     // var temp = overall_Total * 30/100;
     // discount.innerText = temp;
