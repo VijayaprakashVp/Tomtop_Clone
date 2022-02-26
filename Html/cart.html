@@ -127,13 +127,14 @@
 <script>
   function fetchbyid_cart() {
     // console.log("Hey");
-    var user_id = "62164a86451d44799d6a67bc";
+    // var user_id = "62164a86451d44799d6a67bc";
+    var user_id = "62190579345916ab08df6d8f";
     try {
       fetch(`http://localhost:6789/users/${user_id}`)
         .then((res) => res.json())
         .then((data) => {
-          display1(data.cart);
           console.log(data.cart);
+          display1(data.cart);
         });
     } catch (e) {
       console.log(e.message);
