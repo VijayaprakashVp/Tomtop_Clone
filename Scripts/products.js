@@ -1,6 +1,6 @@
 function Products() {
   try {
-    fetch("http://localhost:6789/products")
+    fetch("https://tomtop-clone.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         hello2(data);
