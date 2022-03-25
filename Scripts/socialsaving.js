@@ -1,6 +1,6 @@
 function socialsaving() {
   try {
-    fetch("http://localhost:6789/socials")
+    fetch("https://tomtop-clone.herokuapp.com/socials")
       .then((res) => res.json())
       .then((data) => {
         hello(data);
