@@ -1,6 +1,6 @@
 function Hotdeals() {
   try {
-    fetch("http://localhost:6789/hotdeals")
+    fetch("https://tomtop-clone.herokuapp.com/hotdeals")
       .then((res) => res.json())
       .then((data) => {
         hello1(data);
