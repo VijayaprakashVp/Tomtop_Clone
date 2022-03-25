@@ -40,7 +40,7 @@
 
   function fetchbyid() {
     try {
-      fetch(`http://localhost:6789/socials/${link[1]}`)
+      fetch(`https://tomtop-clone.herokuapp.com/socials/${link[1]}`)
         .then((res) => res.json())
         .then((data) => {
           display(data);
@@ -53,7 +53,7 @@
 
   function fetchbyid1() {
     try {
-      fetch(`http://localhost:6789/hotdeals/${link[1]}`)
+      fetch(`https://tomtop-clone.herokuapp.com/hotdeals/${link[1]}`)
         .then((res) => res.json())
         .then((data) => {
           display(data);
@@ -66,7 +66,7 @@
 
   function fetchbyid2() {
     try {
-      fetch(`http://localhost:6789/products/${link[1]}`)
+      fetch(`https://tomtop-clone.herokuapp.com/products/${link[1]}`)
         .then((res) => res.json())
         .then((data) => {
           display(data);
@@ -112,25 +112,23 @@
     //---------------
 
     function loadData(key) {
-    try {
-      let data = window.localStorage.getItem(key);
-      data = JSON.parse(data);
-      return data;
-    } catch (e) {
-      console.log("e:", e);
-      return undefined;
+      try {
+        let data = window.localStorage.getItem(key);
+        data = JSON.parse(data);
+        return data;
+      } catch (e) {
+        console.log("e:", e);
+        return undefined;
+      }
     }
-  }
 
-  
-  
-  Add_to_cart.onclick = () => {
-    console.log('product:', product)
+    Add_to_cart.onclick = () => {
+      console.log("product:", product);
 
-    // var cart_details = {
-    //   cart:product
-    // }
-    var user_id = loadData("userdetails")._id;
+      // var cart_details = {
+      //   cart:product
+      // }
+      var user_id = loadData("userdetails")._id;
 
       try {
         fetch(`http://localhost:6789/users/${user_id}`, {
